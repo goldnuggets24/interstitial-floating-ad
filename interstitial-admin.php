@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Interstitial Admin for floating ads
-Description: A plugin to schedule floating ads
+Description: A plugin to schedule DFP floating ads
 Author: Mike Levine
 Version: 0.1
 */
@@ -9,6 +9,15 @@ add_action('admin_menu', 'interstitial_floating_ad_plugin_setup_menu');
 add_action( 'admin_enqueue_scripts', 'enqueue_date_picker' );
 add_action( 'admin_menu', 'register_media_selector_settings_page' );
 add_action( 'admin_footer', 'media_selector_print_scripts' );
+add_action( 'admin_footer', 'floating_ad_front_end' );
+
+function floating_ad_front_end()
+{
+	$dir = plugin_dir_path( __FILE__ );
+	include($dir."floating-ad.php");
+}
+
+add_action( 'wp', 'elegance_referal_init' );
  
 function interstitial_floating_ad_plugin_setup_menu(){
         add_menu_page( 'Interstitial Floating Ad Scheduler', 'Interstitial Floating Ad Admin', 'manage_options', 'test-plugin', 'interstitial_init' );

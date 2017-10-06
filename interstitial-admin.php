@@ -9,7 +9,7 @@ add_action('admin_menu', 'interstitial_floating_ad_plugin_setup_menu');
 add_action( 'admin_enqueue_scripts', 'enqueue_date_picker' );
 add_action( 'admin_menu', 'register_media_selector_settings_page' );
 add_action( 'admin_footer', 'media_selector_print_scripts' );
-add_action( 'admin_footer', 'floating_ad_front_end' );
+add_action( 'wp_head', 'floating_ad_front_end' );
 
 function floating_ad_front_end()
 {

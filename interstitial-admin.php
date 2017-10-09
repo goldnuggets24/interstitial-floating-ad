@@ -124,7 +124,6 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1502995302683-0');
 &lt;/div&gt;
 </blockquote></code></pre></p>
 				<input type="text" name="interstitial-dfp-code" value="<?php echo get_option('interstitial-dfp-code', $default = 'sonicscoop'); ?>" placeholder="DFP Code" />
-				<?php wp_handle_upload( $file, $overrides, $time ); ?>
 				<br />
 				<hr>
 				<input type='hidden' value='0' name='activate_ad'>

@@ -12,7 +12,7 @@
              <div class="floatingAdContainer">
                  <!-- change height and width unique and default values to change the size of the frame  -->
                  <div id="floatingad"
-                      style="background: url(https://sonicscoop.com/wp-content/uploads/2017/08/HelixNative_900x500_Animated_SonicScoop_August15_v1a.gif);background-size: 900px;width:<?php echo get_option('interstitial-width'); ?>px;border: 10px ghostwhite solid !important; height:<?php echo get_option('interstitial-height'); ?>px;position:fixed;left:10%;top: 85px;">
+                      style="background: url(<?php echo wp_get_attachment_url( get_option( 'media_selector_attachment_id' ) ); ?>);background-size: 900px;width:<?php echo get_option('interstitial-width'); ?>px;border: 10px ghostwhite solid !important; height:<?php echo get_option('interstitial-height'); ?>px;position:fixed;left:10%;top: 85px;">
                      <img alt="x" id="x" class="floating-ad-x" onClick="this.parentNode.style.display = 'none';jQuery('.floatBack').hide(); jQuery('.floatingAdContainer').remove(); jQuery('.floatBack').remove();" src="https://sonicscoop.com/images/x.png" width="48px;" height="55px;">
                      <span>
              <!-- floating ad link -->

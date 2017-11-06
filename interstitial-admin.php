@@ -16,8 +16,6 @@ function floating_ad_front_end()
 	$dir = plugin_dir_path( __FILE__ );
 	include($dir."floating-ad.php");
 }
-
-add_action( 'wp', 'elegance_referal_init' );
  
 function interstitial_floating_ad_plugin_setup_menu(){
         add_menu_page( 'Interstitial Floating Ad Scheduler', 'Interstitial Floating Ad Admin', 'manage_options', 'test-plugin', 'interstitial_init' );

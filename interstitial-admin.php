@@ -18,7 +18,7 @@ function floating_ad_front_end()
 }
  
 function interstitial_floating_ad_plugin_setup_menu(){
-        add_menu_page( 'Interstitial Floating Ad Scheduler', 'Interstitial Floating Ad Admin', 'manage_options', 'test-plugin', 'interstitial_init' );
+        add_menu_page( 'Interstitial Floating Ad Scheduler', 'Interstitial Floating Ad Admin', 'manage_options', 'interstitial-admin', 'interstitial_init' );
 }
 function register_media_selector_settings_page() {
 	add_submenu_page( 'options-general.php', 'Media Selector', 'Media Selector', 'manage_options', 'media-selector', 'media_selector_settings_page_callback' );

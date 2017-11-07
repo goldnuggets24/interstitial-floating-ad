@@ -1,4 +1,18 @@
 <!---CUSTOM FLOATING AD CODE START -->
+<script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script>
+<script>
+  var googletag = googletag || {};
+  googletag.cmd = googletag.cmd || [];
+</script>
+
+<script>
+  googletag.cmd.push(function() {
+    googletag.defineSlot('/3464054/Interstitial<?php echo get_option('interstitial-width'); ?>x<?php echo get_option('interstitial-height'); ?>', [<?php echo get_option('interstitial-width'); ?>, <?php echo get_option('interstitial-height'); ?>], 'div-gpt-ad-<?php echo get_option('interstitial-dfp-code'); ?>-0').addService(googletag.pubads());
+    googletag.pubads().enableSingleRequest();
+    googletag.enableServices();
+  });
+</script>
+
 <?php if (get_option("activate_ad") == "1") { ?>
 <?php 
     $startdate=strtotime(get_option('startdate-interstitial'));

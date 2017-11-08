@@ -20,9 +20,10 @@
     if($startdate <= time() && $enddate >= time())
         { ?>
 
-<?php if (!isset($_COOKIE["floating"]) || !$_COOKIE["floating"]) { ?>
+<?php if (!isset($_COOKIE["interstitial"]) || !$_COOKIE["interstitial"]) { ?>
     <?php if (function_exists('floating_ad_views')) { ?>
              <!-- frame position -->
+             <style>.floatBack {display: block !important;}</style> 
              <div class="floatingAdContainer">
                  <!-- change height and width unique and default values to change the size of the frame  -->
                  <div id="floatingad"
@@ -49,9 +50,14 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-<?php echo get_opt
                      jQuery('.floatBack').remove();
                  });
              </script>
-             <?php setcookie("floating", "floating-ad", (time() + get_option('daily') == 1 ? 86400 : 172800));
-
-             $_COOKIE["floating"] = "floating-ad";
+             <!-- set cookie -->
+<!-- Options on cookie timing --> 
+<?php
+$time = 172800;
+if (get_option('daily') == 1) 
+{$time = 86400;} else 
+{$time = 172800;}
+ setcookie("interstitial", "interstitial",time()+$time);
      }
 } else { ?>
  <style>.floatBack {display: none !important;}</style> 

@@ -23,18 +23,18 @@
 <?php if (!isset($_COOKIE["interstitial"]) || !$_COOKIE["interstitial"]) { ?>
     <?php if (function_exists('floating_ad_views')) { ?>
              <!-- frame position -->
-             <style>.floatBack {display: block !important;}</style> 
+             <style>.floatBack {display: block !important;}#floatingad {width:920px !important;height:520px !important;}</style> 
              <div class="floatingAdContainer">
                  <!-- change height and width unique and default values to change the size of the frame  -->
                  <div id="floatingad"
-                      style="background: url(<?php echo wp_get_attachment_url( get_option( 'media_selector_attachment_id' ) ); ?>);background-size: 900px;width:<?php echo get_option('interstitial-width'); ?>px;border: 10px ghostwhite solid !important; height:<?php echo get_option('interstitial-height'); ?>px;position:fixed;left:10%;top: 85px;">
+                      style="background: url(<?php echo wp_get_attachment_url( get_option( 'media_selector_attachment_id' ) ); ?>);background-size: 900px;border: 10px ghostwhite solid !important; position:fixed;left:10%;top: 85px;">
                      <img alt="x" id="x" class="floating-ad-x" onClick="this.parentNode.style.display = 'none';jQuery('.floatBack').hide(); jQuery('.floatingAdContainer').remove(); jQuery('.floatBack').remove();" src="https://sonicscoop.com/images/x.png" width="48px;" height="55px;">
                      <span>
              <!-- floating ad link -->
-             <a target="_Blank" href="http://line6.com/helix/helixnative.html?utm_source=SonicScoop&utm_medium=banner&utm_campaign=Helix-Native&utm_content=hf">
+             <a target="_Blank" href="https://sonicscoop.com/contest">
                 <!-- floating ad image -->
                 <!-- /3464054/Interstitial900x500 -->
-<div id='div-gpt-ad-<?php echo get_option('interstitial-dfp-code'); ?>-0' style='height:500px; width:900px;'>
+<div id='div-gpt-ad-<?php echo get_option('interstitial-dfp-code'); ?>-0' style='height:520px; width:920px;'>
 <script>
 googletag.cmd.push(function() { googletag.display('div-gpt-ad-<?php echo get_option('interstitial-dfp-code'); ?>-0'); });
 </script>

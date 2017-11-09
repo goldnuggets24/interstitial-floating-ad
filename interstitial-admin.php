@@ -24,7 +24,7 @@ function register_media_selector_settings_page() {
 	add_submenu_page( 'options-general.php', 'Media Selector', 'Media Selector', 'manage_options', 'media-selector', 'media_selector_settings_page_callback' );
 }
 function enqueue_date_picker(){
-                wp_enqueue_script(
+             wp_enqueue_script(
 			'field-date-js', 
 			'Field_Date.js', 
 			array('jquery', 'jquery-ui-core', 'jquery-ui-datepicker'),
@@ -94,13 +94,14 @@ function interstitial_init() { ?>
  			<hr>
             <div class="options">
 				<h3>Timing</h3>
+				<h5>All times displayed are Eastern Time Zone</h5>
                 <label>When would you like this ad to go live?</label>
                 <br />
-                <input type="date" id="datepicker" name="startdate-interstitial" value="<?php echo get_option('startdate-interstitial', $default = '1970-01-01'); ?>" class="startdate-datepicker" />
+                <input type="datetime-local" id="datepicker" name="startdate-interstitial" value="<?php echo get_option('startdate-interstitial', $default = '1970-01-01'); ?>" class="startdate-datepicker" />
                 <br />
                 <label>When would you like this ad to end?</label>
                 <br />
-                <input type="date" id="datepicker_two" name="enddate-interstitial" value="<?php echo get_option('enddate-interstitial', $default = '2070-01-01'); ?>" class="enddate-datepicker" />
+                <input type="datetime-local" id="datepicker_two" name="enddate-interstitial" value="<?php echo get_option('enddate-interstitial', $default = '2070-01-01'); ?>" class="enddate-datepicker" />
 				<br />
 				<label>How many times would you like to see this ad daily?</label>
                 <br />

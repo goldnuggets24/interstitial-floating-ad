@@ -51,7 +51,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-<?php echo get_opt
                  });
              </script>
              <!-- set cookie -->
-<!-- Options on cookie timing --> 
+
 <?php
 $time = 172800;
 if (get_option('daily') == 1) 

@@ -14,10 +14,12 @@
 </script>
 
 <?php if (get_option("activate_ad") == "1") { ?>
-<?php 
+
+<?php
+	$currenttime = time()-18000; // switches to EST
     $startdate=strtotime(get_option('startdate-interstitial'));
     $enddate=strtotime(get_option('enddate-interstitial'));
-    if($startdate <= time() && $enddate >= time())
+    if($startdate <= $currenttime && $enddate >= $currenttime)
         { ?>
 
 <?php if (!isset($_COOKIE["interstitial"]) || !$_COOKIE["interstitial"]) { ?>

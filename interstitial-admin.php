@@ -95,7 +95,7 @@ function interstitial_init() { ?>
             <div class="options">
 				<h3>Timing</h3>
 				<h5>All times displayed are Eastern Time Zone</h5>
-                <label>When would you like this ad to go live?</label>
+				<label>When would you like this ad to go live?</label>
                 <br />
                 <input type="datetime-local" id="datepicker" name="startdate-interstitial" value="<?php echo get_option('startdate-interstitial', $default = '1970-01-01'); ?>" class="startdate-datepicker" />
                 <br />
@@ -115,6 +115,7 @@ function interstitial_init() { ?>
 				<input type="text" name="interstitial-height" value="<?php echo get_option('interstitial-height', $default = '500'); ?>" placeholder="height" />
 				<hr>
 				<h3>DFP Code</h3>
+
 				<p>This is an example DFP code snippet. Please find the matching code for your ad, and enter only the code in <b>bold</b> into the DFP textfield below:</p>
 				<p><pre><code>&lt;div id='div-gpt-ad-<b>1502995302683</b>-0' style='height:600px; width:300px;'&gt;
 &lt;script&gt;

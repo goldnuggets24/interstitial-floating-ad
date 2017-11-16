@@ -13,7 +13,7 @@
   });
 </script>
 
-<?php if (get_option("activate_ad") == "1") { ?>
+<?php if (get_option("activate_ad") == "1" && !wp_is_mobile()) { ?>
 
 <?php
 	$currenttime = time()-18000; // switches to EST

@@ -108,6 +108,14 @@ function interstitial_init() { ?>
                 <select name="daily" class="form-control" id="sel1">
 					<option value="1" <?php echo get_option('daily', $default = '1') == '1' ? 'selected' : '' ?>>1</option>
 					<option value="2" <?php echo get_option('daily', $default = '2') == '2' ? 'selected' : '' ?>>2</option>
+					<option value="3" <?php echo get_option('daily', $default = '3') == '3' ? 'selected' : '' ?>>3</option>
+					<option value="4" <?php echo get_option('daily', $default = '4') == '4' ? 'selected' : '' ?>>4</option>
+					<option value="5" <?php echo get_option('daily', $default = '5') == '5' ? 'selected' : '' ?>>5</option>
+					<option value="6" <?php echo get_option('daily', $default = '6') == '6' ? 'selected' : '' ?>>6</option>
+					<option value="7" <?php echo get_option('daily', $default = '7') == '7' ? 'selected' : '' ?>>7</option>
+					<option value="8" <?php echo get_option('daily', $default = '8') == '8' ? 'selected' : '' ?>>8</option>
+					<option value="9" <?php echo get_option('daily', $default = '9') == '9' ? 'selected' : '' ?>>9</option>
+					<option value="10" <?php echo get_option('daily', $default = '10') == '10' ? 'selected' : '' ?>>10</option>
 				</select>
 				<hr>
 				<h3>Dimensions</h3>

@@ -56,9 +56,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-<?php echo get_opt
 
 <?php
 $time = 172800;
-if (get_option('daily') == 1) 
-{$time = 86400;} else 
-{$time = 172800;}
+$time = round(86400 / get_option('daily'));
  setcookie("interstitial", "interstitial",time()+$time);
      }
 } else { ?>
